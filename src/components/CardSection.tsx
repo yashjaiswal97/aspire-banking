@@ -245,62 +245,62 @@ const CardSection = () => {
         <span className="inactive-tab">All company cards</span>
       </div>
 
-      <div className="card-info-box">
-        <div className="card-left">
-          <div className="show-card">
-            <img src={eyeIcon} alt="Show Icon" />
-            <span>Show card number</span>
-          </div>
+        <div className="card-info-box">
+            <div className="card-left">
+            <button className="show-card">
+                <img src={eyeIcon} alt="Show Icon" />
+                <span>Show card number</span>
+            </button>
 
-          <CardCarousel
-            cards={cards}
-            activeIndex={activeCardIndex}
-            onActiveCardChange={handleCardChange}
-          />
-          <div className="card-actions">
-            <div className="action">
-              <FreezeToggleButton
-                key={cards[activeCardIndex]?.id} // force reset on card switch
-                isFrozen={cards[activeCardIndex]?.frozen || false}
-                onToggleFreeze={toggleFreeze}
-              />
+            <CardCarousel
+                cards={cards}
+                activeIndex={activeCardIndex}
+                onActiveCardChange={handleCardChange}
+            />
+            <div className="card-actions">
+                <div className="action">
+                <FreezeToggleButton
+                    key={cards[activeCardIndex]?.id} // force reset on card switch
+                    isFrozen={cards[activeCardIndex]?.frozen || false}
+                    onToggleFreeze={toggleFreeze}
+                />
+                </div>
+                <div className="action">
+                <button>
+                    <img src={spendLimitIcon} alt="" />
+                    <p>
+                    Set spend <br></br> limit
+                    </p>
+                </button>
+                </div>
+                <div className="action">
+                <button>
+                    <img src={gpayIcon} alt="" />
+                    <p>
+                    Add to <br /> GPay
+                    </p>
+                </button>
+                </div>
+                <div className="action">
+                <button>
+                    <img src={replaceIcon} alt="" />
+                    <p>
+                    Replace <br />
+                    card
+                    </p>
+                </button>
+                </div>
+                <div className="action">
+                <button>
+                    <img src={cancelIcon} alt="" />
+                    <p>
+                    Cancel <br />
+                    card
+                    </p>
+                </button>
+                </div>
             </div>
-            <div className="action">
-              <button>
-                <img src={spendLimitIcon} alt="" />
-                <p>
-                  Set spend <br></br> limit
-                </p>
-              </button>
             </div>
-            <div className="action">
-              <button>
-                <img src={gpayIcon} alt="" />
-                <p>
-                  Add to <br /> GPay
-                </p>
-              </button>
-            </div>
-            <div className="action">
-              <button>
-                <img src={replaceIcon} alt="" />
-                <p>
-                  Replace <br />
-                  card
-                </p>
-              </button>
-            </div>
-            <div className="action">
-              <button>
-                <img src={cancelIcon} alt="" />
-                <p>
-                  Cancel <br />
-                  card
-                </p>
-              </button>
-            </div>
-          </div>
-        </div>
 
         <div className="card-right">
           <DropdownSection title="Card details" defaultOpen={false}>
