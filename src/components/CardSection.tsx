@@ -177,7 +177,7 @@ const CardSection = () => {
   useEffect(() => {
     cleanLocalStorageCards(); 
     loadCards();
-  }, []);
+  }, [loadCards]);
 
   useEffect(() => {
     const handleCardListUpdate = () => {
