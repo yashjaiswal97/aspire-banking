@@ -36,7 +36,6 @@ const cleanLocalStorageCards = () => {
       );
   
       if (cleaned.length !== parsed.length) {
-        console.warn("🧹 Cleaned invalid cards from localStorage");
         localStorage.setItem("localCards", JSON.stringify(cleaned));
       }
     } catch (e) {
@@ -73,7 +72,7 @@ const CardSection = () => {
     }
 
     const updatedCards = [...cards];
-    const cardToUpdate = { ...updatedCards[activeCardIndex] }; // making a copy
+    const cardToUpdate = { ...updatedCards[activeCardIndex] }; // make a copy
 
     cardToUpdate.frozen = isFrozen;
     updatedCards[activeCardIndex] = cardToUpdate;
@@ -125,7 +124,7 @@ const CardSection = () => {
       (2025 + Math.floor(Math.random() * 5)).toString().slice(2);
 
     const newCard = {
-      id: Date.now().toString(), // make sure every card has a unique ids
+      id: Date.now().toString(), // make sure every card has a unique id
       name: trimmedName,
       last4,
       expiry,
@@ -139,10 +138,10 @@ const CardSection = () => {
 
     localStorage.setItem("localCards", JSON.stringify(updatedCards));
 
-    
+    // 👇 Trigger UI update
     window.dispatchEvent(new Event("cardListUpdated"));
 
-   
+    // 👇 Clear state & close modal
     setCardNameInput("");
     setError("");
     handleCloseModal();
@@ -152,7 +151,7 @@ const CardSection = () => {
       localStorage.getItem("localCards") || "[]"
     );
 
-    // cleaning bad entry
+    // ✅ Clean corrupted or empty entries
     localCards = localCards.filter(
       (c) => c && typeof c.name === "string" && c.name.trim() !== ""
     );
@@ -181,7 +180,7 @@ const CardSection = () => {
 
   useEffect(() => {
     const handleCardListUpdate = () => {
-      loadCards(); 
+      loadCards(); // 🔁 reload updated card list from localStorage + API
     };
 
     window.addEventListener("cardListUpdated", handleCardListUpdate);
@@ -260,7 +259,7 @@ const CardSection = () => {
             <div className="card-actions">
                 <div className="action">
                 <FreezeToggleButton
-                    key={cards[activeCardIndex]?.id} 
+                    key={cards[activeCardIndex]?.id} // force reset on card switch
                     isFrozen={cards[activeCardIndex]?.frozen || false}
                     onToggleFreeze={toggleFreeze}
                 />
