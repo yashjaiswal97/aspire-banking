@@ -139,10 +139,8 @@ const CardSection = () => {
 
     localStorage.setItem("localCards", JSON.stringify(updatedCards));
 
-    // 👇 Trigger UI update
     window.dispatchEvent(new Event("cardListUpdated"));
 
-    // 👇 Clear state & close modal
     setCardNameInput("");
     setError("");
     handleCloseModal();
@@ -152,7 +150,7 @@ const CardSection = () => {
       localStorage.getItem("localCards") || "[]"
     );
 
-    // ✅ Clean corrupted or empty entries
+    // clean bad or empty entries
     localCards = localCards.filter(
       (c) => c && typeof c.name === "string" && c.name.trim() !== ""
     );
@@ -177,11 +175,11 @@ const CardSection = () => {
   useEffect(() => {
     cleanLocalStorageCards(); 
     loadCards();
-  }, [loadCards]);
+  }, []);
 
   useEffect(() => {
     const handleCardListUpdate = () => {
-      loadCards(); // 🔁 reload updated card list from localStorage + API
+      loadCards(); 
     };
 
     window.addEventListener("cardListUpdated", handleCardListUpdate);
@@ -260,7 +258,7 @@ const CardSection = () => {
             <div className="card-actions">
                 <div className="action">
                 <FreezeToggleButton
-                    key={cards[activeCardIndex]?.id} // force reset on card switch
+                    key={cards[activeCardIndex]?.id} 
                     isFrozen={cards[activeCardIndex]?.frozen || false}
                     onToggleFreeze={toggleFreeze}
                 />
