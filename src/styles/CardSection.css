@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+.card-container {
+  width: 75%;
+  padding: 5rem;
+  font-family: 'Inter', -apple-system, BlurMacSystemFont, sans-serif;
+  font-weight: 400;
+  background-color: #ffffff;
+  overflow: scroll;
+}
+.top-section{
+  display: flex;
+  flex-direction: column;
+}
+.top-section-inner{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.top-section .label {
+  font-size: 18px;
+  font-weight: lighter;
+  color: #333;
+}
+.add-card-btn{
+  background-color: #325bb0;
+  border: none;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.top-section .amount {
+  font-size: 34px;
+  font-weight: 600;
+  display: flex;
+}
+.currency{
+  background: #03d167;
+  font-size: 20px; 
+  color: #ffffff;
+  padding: 10px 10px;
+  border-radius: 5px 5px;
+  margin-right: 10px;
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+  margin: 2rem 0;
+  font-size: 18px;
+}
+
+.active-tab {
+  font-weight: 400;
+  border-bottom: 3px solid #26cefd; 
+}
+
+.inactive-tab {
+  color: #aaa;
+}
+
+.card-info-box {
+  box-shadow: 0 0px 50px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 50px;
+}
+
+.card-left {
+  flex: 1;
+  overflow: scroll;
+}
+
+
+.add-card-btn-icon{
+  position: relative;
+  width: 16px;
+}
+.show-card {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 14px;
+  color: #03d167;
+  font-weight: bold;
+}
+
+.card-actions {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f6f8fc;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  height: 140px;
+}
+
+.action {
+  text-align: center;
+  font-size: 16px;
+}
+.action button {
+  padding: 15px;
+  border: none;
+  background-color: #f6f8fc;
+  cursor: pointer;
+}
+.action button:hover {
+  color: #03d167;
+}
+
+.action img {
+  height: 24px;
+  margin-bottom: 6px;
+}
+
+.card-right {
+  flex: 1;
+  min-width: 300px;
+  margin-top:30px;
+}
+
+.card-details-box,
+.transactions-box {
+  background: #f5f9ff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  
+}
+
+.transactions-box h4,
+.card-details-box h4 {
+  margin-bottom: 1rem;
+}
+
+.transaction {
+  display: flex;
+  gap: 12px;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #ffffff;
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+.transaction img {
+  height: 32px;
+}
+
+.merchant {
+  font-weight: 500;
+}
+
+.amount {
+  float: right;
+}
+
+.amount.refund {
+  color: #00C566;
+}
+
+.amount.debit {
+  color: #FF4C4C;
+}
+
+.date {
+  font-size: 12px;
+  color: #888;
+}
+
+.method {
+  font-size: 12px;
+  color: #376AED;
+}
+
+.view-all {
+  text-align: center;
+  margin-top: 1rem;
+  color: #00C566;
+  background: #E2FFF3;
+  padding: 0.6rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #0C365A;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+  color: #f5f9ff;
+}
+
+.modal input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  color: #0C365A;
+}
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-actions button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #03d167;
+  border: none;
+  border-radius: 2px;
+  color: #0C365A;
+}
+
+
+.input-error {
+  border-color: red;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}

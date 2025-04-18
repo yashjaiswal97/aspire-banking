@@ -1,0 +1,112 @@
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  padding: 20px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.credit-card {
+  flex: 0 0 550px;
+  height: 320px;
+  background-color: #2fd672;
+  border-radius: 20px;
+  color: white;
+  padding: 24px;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  position: relative;
+}
+.card-top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card.frozen {
+  background-color: blue;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-name {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+
+.aspire-logo {
+  height: 32px;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-dots {
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.card-details {
+  display: flex;  
+  font-weight: 600;
+  font-size: 16px;
+}
+.card-details>div{
+  font-size: 18px;
+  margin-right: 20px;
+}
+.card-bottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.label {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.visa-logo {
+  width: 66px;
+  margin-left: auto;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background-color: #d4f5e4;
+  transition: background-color 0.3s;
+}
+
+.indicator.active {
+  background-color: #2fd672;
+}

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+.sidebar {
+    width: 25%;
+    height: 100vh;
+    background: #0C365A;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', -apple-system, BlurMacSystemFont, sans-serif;
+    font-weight: 400;
+    padding: 3.2rem 3.5rem;
+    color: white;
+  }
+  
+  .logo {
+    width: 155px;
+    margin-bottom: 2rem;
+  }
+  .tagline{
+    padding:1.2rem 0rem;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #396083;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    opacity: 0.7;
+    padding: 1rem 0rem;
+  }
+ 
+  .menu-item img {
+    height: 32px;
+    width: 32px;
+    
+  }
+  
+  .menu-item span {
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+.active  span{
+    color: #01D167;
+    font-weight: bold;
+  }
+.user-profile {
+    text-align: center;
+    margin-top: auto;
+  }
+  
+.user-initials {
+    background: #01D167;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+.user-name {
+    font-size: 14px;
+    margin-top: 0.5rem;
+  }
