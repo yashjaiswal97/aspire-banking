@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useRef } from "react";
 import "./CardCarousel.css";
-import { getCards, Card } from "../../services/cardService";
+import { Card } from "../../services/cardService";
 import aspireLogoWhite from "../../assets/Aspire-Logo-1.png";
 import visaLogo from "../../assets/Visa-Logo.png";
 
