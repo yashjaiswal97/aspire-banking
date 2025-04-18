@@ -92,9 +92,6 @@ Open your browser and go to `http://localhost:3000` to see the app in action.
 
 ---
 
-## 📄 License
-
-MIT License. Free to use, modify, and distribute.
 
 
 Created by Yash Jaiswal
