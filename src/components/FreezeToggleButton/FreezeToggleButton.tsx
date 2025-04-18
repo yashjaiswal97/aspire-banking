@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import freezeIcon from "../../assets/Freeze-card.png";
 
 interface FreezeToggleButtonProps {
