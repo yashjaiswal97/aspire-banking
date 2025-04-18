@@ -1,46 +1,111 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Aspire Banking UI (React + TypeScript)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- View and add virtual debit cards.
+- Freeze/unfreeze cards, set spend limits.
+- View available balance and recent transactions.
+- Uses `localStorage` to simulate persistent data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 📁 Folder Structure
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+aspire-banking-ui/
+├── node_modules/
+├── public/
+├── src/
+│   ├── assets/                  # Images, icons, or reusable media
+│   ├── components/             # All UI components
+│   │   ├── CardCarousel/
+│   │   │   ├── CardCarousel.tsx
+│   │   │   └── CardCarousel.css
+│   │   ├── DropDown/           # DropDown transaction filter component
+│   │   ├── FreezeToggleButton/ # Toggle button to freeze cards
+│   │   ├── CardSection.tsx     # Card and transaction layout
+│   │   └── Sidebar.tsx         # Navigation Sidebar
+│   ├── services/               # Logic and localStorage services
+│   │   ├── cardService.ts
+│   │   └── dropDownService.ts
+│   ├── styles/                 # Global CSS styles
+│   │   ├── CardSection.css
+│   │   └── Sidebar.css
+│   ├── App.tsx                 # Root component
+│   ├── App.test.tsx           # Test file
+│   ├── App.css
+│   ├── index.tsx              # React app entry point
+│   ├── index.css              # Global styles
+│   ├── logo.svg
+│   ├── react-app-env.d.ts
+│   ├── reportWebVitals.ts
+│   └── setupTests.ts
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+└── README.md
+```
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Getting Started
 
-### `npm run build`
+### 1. Clone the Repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/yourusername/aspire-banking-ui.git
+cd aspire-banking-ui
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Install Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+### 3. Start the Development Server
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Open your browser and go to `http://localhost:3000` to see the app in action.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🧪 Running Tests
 
-## Learn More
+The project includes setup for testing with **React Testing Library** and **Jest**.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm test
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+## ⚙️ Project Configuration
+
+- TypeScript for strong typing.
+- CSS modules and global CSS for styling.
+- Component-based folder structure.
+- Service files manage state using `localStorage`.
+
+---
+
+##  Notes
+
+
+- No backend/API integration is involved; data is mocked and stored in `localStorage`.
+- You can add new cards through the **"Add New Card"** modal.
+- Click the **freeze toggle** to simulate freezing/unfreezing a card.
+
+---
+
+## 📄 License
+
+MIT License. Free to use, modify, and distribute.
+
+
+Created by Yash Jaiswal
+https://github.com/yashjaiswal97
