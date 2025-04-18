@@ -74,16 +74,6 @@ Open your browser and go to `http://localhost:3000` to see the app in action.
 
 ---
 
-## 🧪 Running Tests
-
-The project includes setup for testing with **React Testing Library** and **Jest**.
-
-```bash
-npm test
-```
-
----
-
 ## ⚙️ Project Configuration
 
 - TypeScript for strong typing.
