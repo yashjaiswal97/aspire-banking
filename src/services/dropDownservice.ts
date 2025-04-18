@@ -1,7 +1,6 @@
 import BoxIcon from "../assets/icons/file-storage.png";
 import MegaPhone from "../assets/icons/megaphone.png";
 import Plane from "../assets/icons/plane.png";
-import cardSmall from "../assets/icons/plane.png";
 
 export interface Transaction {
   name: string;
