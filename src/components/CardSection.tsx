@@ -12,6 +12,40 @@ import TransactionsList from "../components/DropDown/TransactionsList";
 import FreezeToggleButton from "../components/FreezeToggleButton/FreezeToggleButton";
 import { Card, getCards } from "../services/cardService";
 
+const cleanLocalStorageCards = () => {
+    const raw = localStorage.getItem("localCards");
+    if (!raw) return;
+  
+    try {
+      const parsed = JSON.parse(raw);
+      if (!Array.isArray(parsed)) {
+        localStorage.removeItem("localCards");
+        return;
+      }
+  
+      const cleaned = parsed.filter(
+        (c) =>
+          c &&
+          typeof c === 'object' &&
+          typeof c.name === 'string' &&
+          c.name.trim() !== '' &&
+          typeof c.id === 'string' &&
+          c.id.trim() !== '' &&
+          typeof c.last4 === 'string' &&
+          typeof c.expiry === 'string'
+      );
+  
+      if (cleaned.length !== parsed.length) {
+        console.warn("🧹 Cleaned invalid cards from localStorage");
+        localStorage.setItem("localCards", JSON.stringify(cleaned));
+      }
+    } catch (e) {
+      console.error("💥 Failed to parse localStorage['localCards'], resetting it.");
+      localStorage.removeItem("localCards");
+    }
+  };
+  
+
 const CardSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [cardNameInput, setCardNameInput] = useState("");
@@ -141,6 +175,7 @@ const CardSection = () => {
   };
 
   useEffect(() => {
+    cleanLocalStorageCards(); 
     loadCards();
   }, []);
 
