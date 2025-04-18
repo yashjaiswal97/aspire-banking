@@ -24,13 +24,17 @@
   }
   .small-card-icon{
     background-color: #325BAF;
-    width: 20px;
+    width: 30px;
     height: 20px;
-    border-radius: 50%;
+    border-radius: 35%;
     display: flex;
     justify-content: center;
     background-repeat: no-repeat;
 
+  }
+  .small-card-icon>img{
+    width: 20px;
+    height: 20px;
   }
   .transaction-info {
     flex: 1;
