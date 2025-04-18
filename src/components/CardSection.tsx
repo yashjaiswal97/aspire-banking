@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/CardSection.css";
 import eyeIcon from "../assets/eye.png";
 import spendLimitIcon from "../assets/Set-spend-limit.png";
@@ -36,6 +36,7 @@ const cleanLocalStorageCards = () => {
       );
   
       if (cleaned.length !== parsed.length) {
+        
         localStorage.setItem("localCards", JSON.stringify(cleaned));
       }
     } catch (e) {
