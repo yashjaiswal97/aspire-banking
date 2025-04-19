@@ -1,6 +1,5 @@
 
-# Aspire Banking UI (React + TypeScript)
-
+# Aspire Card UI 
 
 ## Features
 
